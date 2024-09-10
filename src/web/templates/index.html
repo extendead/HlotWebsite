@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+
+{% block title %}hlot{% endblock %}
+
+{% block body %}
+
+<!-- ШАПКА -->
+<header class="header">
+    <div class="header__container">
+        <div class="logotype">
+            <h1>hlot</h1>
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a id="nav-info" href="">О нас</a></li>
+                <li><a href="">Услуги и цены</a></li>
+                <li><a href="">Контакты</a></li>
+                <li><a id="consultation" href="">Консультация</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<!-- ТЕЛО -->
+<div class="body">
+
+    <div class="blob-1">
+        <img src="{{ url_for ('static', filename='img/decoration/intro-decoration/bg-decor/Ellipse 1.png') }}"
+             alt="Красивый градиент">
+    </div>
+
+    <div class="intro">
+        <div class="intro__text">
+            <h1>Сценарии любого<br>формата</h1>
+            <h4>Торжественные мероприятиями с протоколом<br>
+                Индивидуальные поздравления<br>
+                Фильмы, рекламы, блоги и многое другое</h4>
+            <div class="btn__intro__text">
+                <a href="">К услугам</a>
+            </div>
+        </div>
+        <div class="intro__photo">
+            <img class="intro__photo-1" src="{{ url_for ('static', filename='img/decoration/intro-decoration/grand-decor/Blob.png') }}" alt="">
+            <img class="intro__photo-2" src="{{ url_for ('static', filename='img/decoration/intro-decoration/grand-decor/Blob-1.png') }}" alt="">
+        </div>
+    </div>
+
+    <div class="blob-2">
+        <img src="{{ url_for ('static', filename='img/decoration/intro-decoration/bg-decor/Ellipse 2.png') }}" alt="gr">
+    </div>
+
+    <div class="information">
+        <div class="experience">
+            <div class="experience__head">
+                <div class="experience__head__content">
+                    <h1>Более</h1>
+                    <h2><span>100</span></h2>
+                </div>
+                <img src="{{ url_for ('static', filename='img/decoration/body-decoration/my-icons/houses.png') }}" alt="">
+            </div>
+            <div class="experience__content">
+                <h3>Успешно проведенных<br>городских мероприятий</h3>
+                <p>9 мая, мисс республика, открытие<br>и закрытие различных форумов</p>
+            </div>
+        </div>
+        <div class="years">
+            <div class="years__head">
+                <div class="years__head__content">
+                    <h1>Более</h1>
+                    <h2><span>20 </span>лет</h2>
+                </div>
+                <img src="{{ url_for ('static', filename='img/decoration/body-decoration/my-icons/stars.png') }}" alt="">
+            </div>
+            <div class="years__content">
+                <h3>Коммерческого опыта в<br>написании различных сценариев</h3>
+                <p>В том числе для администрации города<br>и городских мероприятий</p>
+            </div>
+        </div>
+        <div class="government">
+            <div class="government__head">
+                <div class="government__head__content">
+                    <h1>Сотрудничаем с</h1>
+                    <h2>Гос.<br>Учреждениями</h2>
+                </div>
+                <img src="{{ url_for ('static', filename='img/decoration/body-decoration/my-icons/gavernment.png') }}" alt="">
+            </div>
+            <div class="government__content">
+                <p>Университеты, школы, администрация, театры,<br>филармонии и другие учреждения</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="services">
+        <h1>Напишем сценарии для</h1>
+        <div class="services__categories">
+            <div class="films">
+                <div class="films__content">
+                    <ul>
+                        <li>Фильмов</li>
+                        <li>Клипов</li>
+                        <li>Рекламы</li>
+                        <li>Блога</li>
+                    </ul>
+                </div>
+                <img src="{{ url_for ('static', filename='img/decoration/body-decoration/3d-icons/Film Roll (1) 1.png') }}" alt="">
+            </div>
+            <div class="holidays">
+                <div class="holidays__content">
+                    <ul>
+                        <li>Праздников</li>
+                        <li>Мероприятий</li>
+                        <li>Свадеб</li>
+                        <li>Утренников</li>
+                    </ul>
+                </div>
+                <img src="{{ url_for ('static', filename='img/decoration/body-decoration/3d-icons/Party Confetti 1.png') }}" alt="">
+            </div>
+            <div class="theater">
+                <div class="theater__content">
+                    <ul>
+                        <li>Спектаклей</li>
+                        <li>Шоу</li>
+                        <li>Выступлений</li>
+                        <li>Презентаций</li>
+                    </ul>
+                </div>
+                <img src="{{ url_for ('static', filename='img/decoration/body-decoration/3d-icons/Microphone 1.png') }}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="offers">
+        <h1>Что мы предлагаем?</h1>
+        <div class="offers__block">
+            <div class="offers__block__top">
+                <div class="full__script">
+                    <h1>Полное написание сценария</h1>
+                    <p>На основе оригинальной идеи создаем уникальный сценарий</p>
+                </div>
+                <div class="edit__script">
+                    <h1>Редактирование
+                        Доработка</h1>
+                    <p>Редактирование или доработка уже существующей или незаконченной работы</p>
+                </div>
+                <div class="analysis__script">
+                    <h1>Анализ<br>сценария</h1>
+                    <p>Поиск слабых мест сценария, их правка и оценка сильных сторон работы</p>
+                </div>
+            </div>
+            <div class="offers__block__bottom">
+                <div class="contract__script">
+                    <h1>Контрактная<br>работа</h1>
+                    <p>Работа над фильмами, блогами на долгосрочной<br>основе</p>
+                </div>
+                <div class="info__price__script">
+                    <h4>Стоимость услуги может меняться в зависимости от объема, сложности задачи и сроков. </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="price-list">
+        <ul>
+            <li><div><h4>Полное написание сценария</h4><p>От <span>3000</span>₽</p></div></li>
+            <li><div><h4>Редактирование / Доработка</h4><p>От <span>1500</span>₽</p></div></li>
+            <li><div><h4>Анализ сценария</h4><p>От <span>2000</span>₽</p></div></li>
+            <li><div><h4>Контрактная работа</h4><p>По договоренности</p></div></li>
+        </ul>
+    </div>
+
+    <div class="feedback">
+        <h1>Обратная связь</h1>
+        <div class="feedback-form">
+            <form action="">
+                <div class="feedback-form__information">
+                    <input type="text" name="name" id="name" placeholder="Имя">
+                    <textarea name="text" id="text" placeholder="Текст"></textarea>
+                </div>
+                <div class="feedback-form__feed">
+                    <input type="tel" name="phone" id="phone" value="+7">
+                    <input type="email" name="email" id="email" placeholder="email">
+                    <div class="feedback-form__feed__social-media">
+                        <label class="telegram"><span>Telegram</span><input type="checkbox" name="telegram" id="telegram"></label>
+                        <label class="whatsapp"><span>WhatsApp</span><input type="checkbox" name="whatsapp" id="whatsapp"></label>
+                    </div>
+                    <input type="submit">
+                </div>
+            </form>
+            <p>*Поле e-mail не является обязательным. Заполняйте его если вам удобнее связаться по почте</p>
+        </div>
+    </div>
+</div>
+
+<!-- ПОДВАЛ -->
+<footer class="footer">
+    <div class="footer__content">
+        <div class="footer__navigation">
+            <ul>
+                <li><a href="">Контакты</a></li>
+                <li><a href="">Прайс-лист</a></li>
+                <li><a href="">Услуги</a></li>
+            </ul>
+        </div>
+        <div class="footer__contacts">
+            <h1>Контакты</h1>
+            <ul>
+                <li><a href=""><img src="{{ url_for ('static', filename='img/decoration/footer-decoration/social-media-icons/Frame.png') }}" alt=""></a></li>
+                <li><a href=""><img src="{{ url_for ('static', filename='img/decoration/footer-decoration/social-media-icons/Frame-1.png') }}" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <h1>hlot</h1>
+        <p>2024</p>
+    </div>
+</footer>
+
+{% endblock %}

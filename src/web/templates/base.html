@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='adaptation.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<!--
+         Размеры экранов для верстки
+    1. Декстоп: ОТ 1920px
+    2. Ноутбуки: ОТ 1280px ДО 1919px
+    3. Планшеты: ОТ 768px ДО 1279px
+    4. Мобилки: ОТ 320px ДО 767px
+-->
+
+{% block body %}
+{% endblock %}
+
+</body>
+</html>
