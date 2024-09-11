@@ -28,6 +28,7 @@
 html {
     background-color: #373A36;
     color: #eee;
+    scroll-behavior: smooth;
 }
 
 @media (min-width: 1280px) {
@@ -576,6 +577,11 @@ html {
         margin-right: 5px;
     }
 
+    .telegram:hover,
+    .whatsapp:hover {
+        background-color: #D48166;
+    }
+
     .whatsapp {
         margin-left: 5px;
     }
@@ -600,6 +606,8 @@ html {
     .footer__content {
         display: flex;
         justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1840px;
     }
 
     .footer__navigation {
@@ -631,8 +639,9 @@ html {
 
     .footer__bottom {
         display: flex;
-        margin-top: 80px;
+        margin: 80px auto;
         justify-content: space-between;
+        max-width: 1840px;
         h1 {
             font-family: "Milksea Demo", sans-serif;
             font-size: 40px;
@@ -645,6 +654,41 @@ html {
             font-size: 30px;
             font-weight: 100;
         }
+    }
+
+    /* Декор */
+    .blob-3, .blob-4,
+    .blob-5, .blob-6,
+    .blob-7 {
+        position: absolute;
+        z-index: -999;
+        filter: blur(70px);
+        user-select: none;
+        pointer-events: none;
+    }
+
+    .blob-3 {
+        margin-top: -140px;
+        left: 0;
+    }
+
+    .blob-4 {
+        right: 0;
+        margin-top: 150px;
+    }
+
+    .blob-5 {
+        left: 0;
+    }
+
+    .blob-6 {
+        right: 0;
+        margin-top: 180px;
+    }
+
+    .blob-7 {
+        left: 0;
+        margin-top: 100px;
     }
 
 }
