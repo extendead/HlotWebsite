@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}hlot - Админ панель{% endblock %}
+
+{% block body %}
+
+<div class="admin-login">
+    <div class="admin-login__block">
+        <div class="admin-login__logo">
+            <h1><span>admin</span>panel</h1>
+        </div>
+        <div class="admin-login__form">
+            <form method="post">
+                <div class="admin-login__form__data">
+                    <input type="text" placeholder="Логин" id="login" name="login">
+                    <input type="password" placeholder="Пароль" id="password" name="password">
+                </div>
+                <input type="submit" value="Войти">
+            </form>
+        </div>
+    </div>
+
+    <img src="{{ url_for('static', filename='img/decoration/admin-decoration/login/Ellipse 6.png') }}" alt="">
+
+</div>
+
+{% endblock %}

@@ -187,7 +187,7 @@
     <div class="feedback" id="feedback">
         <h1>Обратная связь</h1>
         <div class="feedback-form">
-            <form action="">
+            <form action="" method="post">
                 <div class="feedback-form__information">
                     <input type="text" name="name" id="name" placeholder="Имя">
                     <textarea name="text" id="text" placeholder="Текст"></textarea>
@@ -203,17 +203,20 @@
                             const tg = document.getElementById('label_tg')
                             const wa = document.getElementById('label_wa')
 
+                            const tg_checkbox = document.getElementById('telegram')
+                            const wa_checkbox = document.getElementById('whatsapp')
+
                             tg.addEventListener('change', function () {
                                 tg.style.backgroundColor = '#D48166';
                                 wa.style.backgroundColor = 'inherit';
-                                tg.checked = true;
-                                wa.checked = false;
+                                tg_checkbox.checked = true;
+                                wa_checkbox.checked = null;
                             })
                             wa.addEventListener('change', function () {
                                 wa.style.backgroundColor = "#D48166";
                                 tg.style.backgroundColor = "inherit"
-                                wa.checked = true;
-                                tg.checked = false;
+                                wa_checkbox.checked = true
+                                tg_checkbox.checked = null
                             })
 
                         </script>
