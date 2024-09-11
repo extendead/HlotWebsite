@@ -1,0 +1,96 @@
+@import "reset.css";
+@import url('https://fonts.cdnfonts.com/css/milksea');
+@import url('https://db.onlinewebfonts.com/c/30aaff8bab312adfd29944c9cfb18158?family=Tilda+Sans');
+
+
+::selection {
+    background-color: #D48166;
+}
+
+::-webkit-scrollbar {
+    background-color: #373A36;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #D48166;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #373A36;
+    color: #eee;
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 1280px) {
+
+    .admin-login {
+        font-family: "Tilda Sans", sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 240px;
+
+        img {
+            position: absolute;
+            z-index: -999;
+            margin-top: -240px;
+        }
+
+    }
+
+    .admin-login__block {
+        display: block;
+        justify-content: center;
+        background-color: rgba(41, 44, 43, .5);
+        backdrop-filter: blur(8px);
+        padding: 32px 84px;
+        border-radius: 30px;
+    }
+
+    .admin-login__logo {
+        display: flex;
+        justify-content: center;
+        font-family: "Milksea Demo", sans-serif;
+        font-size: 30px;
+        color: #eee;
+        user-select: none;
+        span {
+            color: #D48166;
+        }
+    }
+
+    .admin-login__form {
+        margin-top: 39px;
+        form {
+            width: 450px;
+            input:not([type="submit"]) {
+                background-color: #eee;
+                font-size: 25px;
+                border-radius: 10px;
+                padding: 0 15px;
+                width: 100%;
+                height: 55px;
+                margin-top: 10px;
+                color: #292C2B;
+            }
+            input[type="submit"] {
+                margin-top: 69px;
+                background-color: #D48166;
+                width: 100%;
+                height: 55px;
+                border-radius: 10px;
+                font-size: 22px;
+            }
+        }
+    }
+
+}
