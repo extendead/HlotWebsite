@@ -42,7 +42,9 @@ html {
         img {
             position: absolute;
             z-index: -999;
-            margin-top: -240px;
+            margin-top: -310px;
+            user-select: none;
+            pointer-events: none;
         }
 
     }

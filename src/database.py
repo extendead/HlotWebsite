@@ -2,7 +2,7 @@ from mysql.connector import Connect
 from mysql.connector.errors import Error
 
 from colorama import init, Fore, Back
-from typing import Any
+from typing import Any, Union
 
 
 class Database:
@@ -44,7 +44,25 @@ class Database:
         :return: Логин и пароль для входа в админ-панель по логину
         """
         try:
-            self.cur.execute(""" SELECT * FROM admin_data WHERE login = %s """, (login,))
-            return self.cur.fetchone()
+            self.cur.execute(""" SELECT * FROM admin_data WHERE login = '%s' """ % login)
+            res = self.cur.fetchone()
+            if not res:
+                print(Back.RED + "Такого логина нет!")
+            return res
         except Error as e:
-            print(Back.RED + f"Ошибка вывода логина и пароля! {e}")
+            print(Back.RED + f"Ошибка вывода логина и пароля через логин! {e}")
+
+    def select_id_data(self, admin_id: Union[str, int]) -> Any:
+        """
+
+        :param admin_id: ID Админа
+        :return: Всю информацию из бд
+        """
+        try:
+            self.cur.execute(""" SELECT * FROM admin_data WHERE id = '%s' """ % admin_id)
+            res = self.cur.fetchone()
+            if not res:
+                print(Back.RED + "Такого ID нет!")
+            return res
+        except Error as e:
+            print(Back.RED + f"Ошибка вывода логина и пароля через ID! {e}")
