@@ -15,20 +15,6 @@ db = Database()
 check = Check
 
 
-# def redirect_dest(fallback):
-#     dest = request.args.get('next')
-#     try:
-#         dest_url = url_for(dest)
-#     except:
-#         return redirect(fallback)
-#     return redirect(dest_url)
-
-
-# @login_manager.user_loader
-# def load_user(admin_id):
-#     print("load_user")
-#     return UserLogin().fromDB(admin_id=admin_id, database=db)
-
 @login_manager.user_loader
 def load_user(user_login):
     print(user_login)
@@ -68,13 +54,9 @@ def admin_login():
         login_ = request.form['login']
         password = request.form['password']
         check_data = check.CheckAdminLoginData(login=login_, password=password)
-        # user = db.select_login_data(login_)[0]
         ul = UserLogin()
         if check_data:   # user and :
-            # user_login = ul.create(user)
-            # load_user(user_login)
             login_user(UserLogin().create(login_))
-            print(ul.get_id())
             return redirect(f"/admin-_-panel/{ul.get_id()}")      # redirect_dest(url_for(f"admin_panel"))
         else:
             flash("Неверные данные для входа.")
@@ -87,7 +69,11 @@ def admin_login():
 def admin_panel(admin_id):
     ul = UserLogin()
     flash("Done!")
-    return render_template("admin.html")
+    feeds = db.select_all_users()
+    users = []
+    for feed in feeds:
+        users.append(feed)
+    return render_template("admin.html", users=users)
 
 
 # @login_manager.unauthorized_handler

@@ -29,666 +29,666 @@ html {
     background-color: #373A36;
     color: #eee;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-@media (min-width: 1280px) {
 
-    body {
-        max-width: 2120px;
-        margin: 0 auto;
-    }
+body {
+    max-width: 2120px;
+    margin: 0 auto;
+}
 
-    .header,
-    .body {
-        padding: 0 130px;
-        margin: 0 auto;
-    }
+.header,
+.body {
+    padding: 0 130px;
+    margin: 0 auto;
+}
 
-    /* * * * * ШАПКА * * * * */
+/* * * * * ШАПКА * * * * */
 
-    .header__container {
-        margin-top: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        h1 {
-            font-family: "Milksea Demo", sans-serif;
-            font-size: 40px;
-            &::first-letter {
-            color: #D48166;
-            }
+.header__container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        font-family: "Milksea Demo", sans-serif;
+        font-size: 40px;
+        &::first-letter {
+        color: #D48166;
         }
     }
+}
 
-    /* Логотип */
-    .logotype {
+/* Логотип */
+.logotype {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background: rgb(211, 130, 103);
+    background: linear-gradient(90deg, rgba(211, 130, 103, 0.35) 0%, rgba(255, 255, 255, 0.05) 100%);
+    width: 131px;
+    height: 60px;
+    user-select: none;
+    h1 {
+        margin-top: 5px;
+    }
+}
+
+/* Навигация */
+.navigation,
+.navigation ul {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    a {
+        color: #373A36;
+        font-family: "Tilda Sans", sans-serif;
+        font-size: 20px;
+        padding: 20px 20px;
+        background-color: #eee;
+    }
+}
+
+#consultation {
+    color: #eee;
+    background-color: #D48166;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#nav-info {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.navigation ul li a:hover {
+    background-color: #D48166;
+    color: #eee;
+    transition: all ease .15s;
+}
+
+
+/* * * * * ТЕЛО * * * * */
+
+/* Декор */
+.blob-1 {
+    position: absolute;
+    z-index: -999;
+    top: 0;
+    left: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* * * ИНТРО * * */
+
+/* Текст */
+.intro {
+    display: flex;
+    margin-top: 170px;
+    width: 100%;
+}
+
+.intro__text {
+    font-family: "Tilda Sans", sans-serif;
+    display: block;
+    justify-content: left;
+    h1 {
+        font-size: 110px;
+        -webkit-text-stroke: 1px #eee;
+    }
+    h4 {
+        padding: 0 5px;
+        margin-top: 30px;
+        font-size: 30px;
+    }
+}
+
+.btn__intro__text {
+    margin-top: 30px;
+    background-color: #D48166;
+    max-width: 280px;
+    height: 70px;
+    border-radius: 15px;
+    box-shadow: 0 0 28px #D48166;
+    font-size: 30px;
+    a {
+        border-radius: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 15px;
-        background: rgb(211, 130, 103);
-        background: linear-gradient(90deg, rgba(211, 130, 103, 0.35) 0%, rgba(255, 255, 255, 0.05) 100%);
-        width: 131px;
-        height: 60px;
-        user-select: none;
-        h1 {
-            margin-top: 5px;
-        }
-    }
-
-    /* Навигация */
-    .navigation,
-    .navigation ul {
-        display: flex;
-        align-items: center;
-        user-select: none;
-        a {
-            color: #373A36;
-            font-family: "Tilda Sans", sans-serif;
-            font-size: 20px;
-            padding: 20px 20px;
-            background-color: #eee;
-        }
-    }
-
-    #consultation {
         color: #eee;
-        background-color: #D48166;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-
-    #nav-info {
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-    }
-
-    .navigation ul li a:hover {
-        background-color: #D48166;
-        color: #eee;
-        transition: all ease .15s;
-    }
-
-
-    /* * * * * ТЕЛО * * * * */
-
-    /* Декор */
-    .blob-1 {
-        position: absolute;
-        z-index: -999;
-        top: 0;
-        left: 0;
-        user-select: none;
-        pointer-events: none;
-    }
-
-    /* * * ИНТРО * * */
-
-    /* Текст */
-    .intro {
-        display: flex;
-        margin-top: 170px;
-        width: 100%;
-    }
-
-    .intro__text {
-        font-family: "Tilda Sans", sans-serif;
-        display: block;
-        justify-content: left;
-        h1 {
-            font-size: 110px;
-            -webkit-text-stroke: 1px #eee;
-        }
-        h4 {
-            padding: 0 5px;
-            margin-top: 30px;
-            font-size: 30px;
-        }
-    }
-
-    .btn__intro__text {
-        margin-top: 30px;
-        background-color: #D48166;
-        max-width: 280px;
-        height: 70px;
-        border-radius: 15px;
-        box-shadow: 0 0 28px #D48166;
-        font-size: 30px;
-        a {
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #eee;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .btn__intro__text a:hover {
-        transition: all ease .15s;
-        box-shadow: 0 0 35px #D48166;
-    }
-
-    /* Фото */
-    .intro {
-        justify-content: space-between;
-    }
-
-    .intro__photo {
-        margin-top: -100px;
-        img {
-            display: flex;
-            justify-content: right;
-            user-select: none;
-            pointer-events: none;
-        }
-    }
-
-    .intro__photo-2 {
-        margin-top: -300px;
-    }
-
-    .blob-2 {
-        user-select: none;
-        pointer-events: none;
-        position: absolute;
-        right: 0;
-        margin-top: -680px;
-        z-index: -999;
-    }
-
-    /* Блок информации */
-    .information {
-        margin-top: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-family: "Tilda Sans", sans-serif;
-        span {
-            font-family: "Idealist Sans", sans-serif;
-            font-weight: 100;
-        }
-        img {
-            user-select: none;
-            pointer-events: none;
-        }
-    }
-
-    .experience,
-    .years,
-    .government {
-        background-color: #292C2B;
-        border-radius: 25px;
-        width: 100%;
-        height: 320px;
-        padding: 30px;
-        overflow: hidden;
-    }
-
-    .experience,
-    .years {
-        margin-right: 10px;
-    }
-    
-    .experience {
-        display: block;
-    }
-
-    .experience__head {
-        display: flex;
-        justify-content: space-between;
-        font-size: 30px;
-        img {
-            margin-top: -50px;
-        }
-        h2 {
-            position: absolute;
-            margin-top: -20px;
-            font-size: 90px;
-        }
-    }
-
-    .experience__content {
-        margin-top: 10px;
-        h3 {
-            font-size: 27px;
-        }
-        p {
-            margin-top: 10px;
-            font-size: 17px;
-        }
-    }
-
-    .years__head {
-        display: flex;
-        justify-content: space-between;
-        img {
-            margin-top: -50px;
-            margin-right: -20px;
-        }
-    }
-
-    .years__head__content {
-        h1 {
-            font-size: 30px;
-        }
-        h2 {
-            margin-top: -10px;
-            position: absolute;
-            z-index: 99;
-            font-size: 80px;
-        }
-    }
-
-    .years__content {
-        margin-top: 20px;
-        font-size: 27px;
-        p {
-            margin-top: 10px;
-            font-size: 17px;
-        }
-    }
-
-    .government__head {
-        display: flex;
-        justify-content: space-between;
-        img {
-            margin-top: -90px;
-        }
-    }
-
-    .government__head__content {
-        h1 {
-            font-size: 25px;
-        }
-        h2 {
-            position: absolute;
-            z-index: 99;
-            font-size: 50px;
-        }
-    }
-
-    .government__content {
-        p {
-            font-size: 20px;
-            margin-top: 70px;
-        }
-    }
-
-    /* Напишем сценарии для */
-    .services {
-        margin-top: 150px;
-        h1 {
-            font-family: "Tilda Sans", sans-serif;
-            font-size: 50px;
-        }
-    }
-
-    .services__categories {
-        margin-top: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .films,
-    .holidays,
-    .theater {
-        display: flex;
-        justify-content: space-between;
-        ul {
-            align-items: center;
-            font-family: "Tilda Sans", sans-serif;
-            font-size: 28px;
-            padding: 28px 30px;
-            background-color: rgba(41, 44, 43, .5);
-            backdrop-filter: blur(8px);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: bottom;
-            width: 400px;
-            height: 200px;
-            border-radius: 25px;
-            border: 3px solid #292C2B;
-        }
-        img {
-            z-index: -999;
-            position: absolute;
-            user-select: none;
-            pointer-events: none;
-            margin-top: -100px;
-        }
-    }
-
-    .films,
-    .holidays {
-        margin-right: 10px;
-    }
-
-    .films img {
-        margin-left: 250px;
-    }
-
-    .holidays img {
-        margin-top: -200px;
-        margin-left: 170px;
-    }
-
-    .theater img {
-        margin-top: -140px;
-        margin-left: 40px;
-    }
-
-    /* Услуги */
-    .offers {
-        margin-top: 150px;
-        h1 {
-            font-family: "Tilda Sans", sans-serif;
-            font-size: 50px;
-        }
-    }
-
-    .offers__block {
-        margin-top: 50px;
-        display: block;
-        background-color: rgba(41, 44, 43, .5);
-        backdrop-filter: blur(8px);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom;
-        border: 3px solid #292C2B;
-        border-radius: 20px;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .offers__block__top,
-    .offers__block__bottom {
-        display: flex;
-    }
-
-    .full__script {
-        border-right: 3px solid #292C2B;
-        border-bottom: 3px solid #292C2B;
-    }
-
-    .edit__script {
-        border-bottom: 3px solid #292C2B;
-    }
-
-    .analysis__script {
-        border-left: 3px solid #292C2B;
-        border-bottom: 3px solid #292C2B;
-    }
-
-    .contract__script {
-        border-right: 3px solid #292C2B;
-    }
-
-    .info__price__script {
-        font-family: "Tilda Sans", sans-serif;
-        font-size: 30px;
-        display: flex;
-        align-items: center;
-        padding: 52px;
-    }
-
-    .full__script, .edit__script,
-    .analysis__script, .contract__script {
-        font-family: "Tilda Sans", sans-serif;
-        padding: 52px;
-        h1 {
-            font-size: 40px;
-        }
-        p {
-            margin-top: 20px;
-            font-size: 20px;
-        }
-    }
-
-    /* Прайс-лист */
-    .price-list {
-        margin-top: 150px;
-        display: block;
-        font-family: "Tilda Sans", sans-serif;
-        font-size: 35px;
-        background: rgb(211, 130, 103);
-        background: linear-gradient(90deg, rgba(211, 130, 103, 0.35) 0%, rgba(255, 255, 255, 0.05) 100%);
-        padding: 31px 52px;
-        border-radius: 25px;
-        span {
-            font-family: "Idealist Sans", sans-serif;
-            font-weight: 100;
-        }
-        li {
-            margin-top: 20px;
-        }
-        li div {
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-
-    /* Фидбек */
-    .feedback {
-        margin-top: 150px;
-        background-color: rgba(41, 44, 43, .5);
-        backdrop-filter: blur(8px);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom;
-        padding: 61px 52px;
-        font-family: "Tilda Sans", sans-serif;
-        border-radius: 25px;
-        height: max-content;
-        h1 {
-            font-size: 35px;
-        }
-        p {
-            margin-top: 10px;
-            font-size: 18px;
-            color: #676767;
-        }
-    }
-
-    .feedback-form {
-        justify-content: center;
-        margin-top: 30px;
         width: 100%;
         height: 100%;
-        form {
-            font-size: 23px;
-            color: #292C2B;
-            display: flex;
-            justify-content: space-between;
-        }
     }
+}
 
-    .feedback-form__information {
-        display: grid;
-        width: 100%;
-        margin-right: 5px;
-        input {
-            margin-bottom: 5px;
-            height: 60px;
-            padding: 0 10px;
-        }
-        textarea {
-            margin-top: -98px;
-            resize: none;
-            outline: none;
-            padding: 15px 10px;
-        }
-        input, textarea {
-            background-color: #eee;
-            border-radius: 11px;
-        }
-    }
+.btn__intro__text a:hover {
+    transition: all ease .15s;
+    box-shadow: 0 0 35px #D48166;
+}
 
-    .feedback-form__feed {
-        display: grid;
-        width: 100%;
-        margin-left: 5px;
-        input:not(input[type="submit"]) {
-            color: #292C2B;
-            background-color: #eee;
-            margin-bottom: 10px;
-            height: 60px;
-            padding: 0 10px;
-        }
-        input[type="submit"] {
-            margin-top: 10px;
-            height: 60px;
-            color: #eee;
-            background-color: #D48166;
-        }
-        input[type="checkbox"] {
-            opacity: 0;
-            width: 0;
-            height: 0;
-            z-index: -999;
-            display: none;
-        }
-        input {
-            border-radius: 11px;
-        }
-    }
+/* Фото */
+.intro {
+    justify-content: space-between;
+}
 
-    .feedback-form__feed__social-media {
+.intro__photo {
+    margin-top: -100px;
+    img {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        label {
-            border-radius: 11px;
-            border: 3px solid #D48166;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 60px;
-            span {
-                color: #eee;
-            }
-        }
+        justify-content: right;
+        user-select: none;
+        pointer-events: none;
     }
+}
 
-    .telegram {
-        margin-right: 5px;
+.intro__photo-2 {
+    margin-top: -300px;
+}
+
+.blob-2 {
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    margin-top: -680px;
+    z-index: -999;
+}
+
+/* Блок информации */
+.information {
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Tilda Sans", sans-serif;
+    span {
+        font-family: "Idealist Sans", sans-serif;
+        font-weight: 100;
     }
-
-    .telegram:hover,
-    .whatsapp:hover {
-        background-color: #D48166;
+    img {
+        user-select: none;
+        pointer-events: none;
     }
+}
 
-    .whatsapp {
-        margin-left: 5px;
+.experience,
+.years,
+.government {
+    background-color: #292C2B;
+    border-radius: 25px;
+    width: 100%;
+    height: 320px;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.experience,
+.years {
+    margin-right: 10px;
+}
+
+.experience {
+    display: block;
+}
+
+.experience__head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    img {
+        margin-top: -50px;
     }
-
-    /* * * * * ПОДВАЛ * * * * */
-    .footer {
-        margin-top: 150px;
+    h2 {
         position: absolute;
-        left: 0;
-        top: auto;
-        height: 450px;
-        width: 100%;
+        margin-top: -20px;
+        font-size: 90px;
+    }
+}
+
+.experience__content {
+    margin-top: 10px;
+    h3 {
+        font-size: 27px;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 17px;
+    }
+}
+
+.years__head {
+    display: flex;
+    justify-content: space-between;
+    img {
+        margin-top: -50px;
+        margin-right: -20px;
+    }
+}
+
+.years__head__content {
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        margin-top: -10px;
+        position: absolute;
+        z-index: 99;
+        font-size: 80px;
+    }
+}
+
+.years__content {
+    margin-top: 20px;
+    font-size: 27px;
+    p {
+        margin-top: 10px;
+        font-size: 17px;
+    }
+}
+
+.government__head {
+    display: flex;
+    justify-content: space-between;
+    img {
+        margin-top: -90px;
+    }
+}
+
+.government__head__content {
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        position: absolute;
+        z-index: 99;
+        font-size: 50px;
+    }
+}
+
+.government__content {
+    p {
+        font-size: 20px;
+        margin-top: 70px;
+    }
+}
+
+/* Напишем сценарии для */
+.services {
+    margin-top: 150px;
+    h1 {
+        font-family: "Tilda Sans", sans-serif;
+        font-size: 50px;
+    }
+}
+
+.services__categories {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.films,
+.holidays,
+.theater {
+    display: flex;
+    justify-content: space-between;
+    ul {
+        align-items: center;
+        font-family: "Tilda Sans", sans-serif;
+        font-size: 28px;
+        padding: 28px 30px;
         background-color: rgba(41, 44, 43, .5);
         backdrop-filter: blur(8px);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
-        padding: 52px 130px;
-        font-family: "Tilda Sans", sans-serif;
+        width: 400px;
+        height: 200px;
+        border-radius: 25px;
+        border: 3px solid #292C2B;
     }
+    img {
+        z-index: -999;
+        position: absolute;
+        user-select: none;
+        pointer-events: none;
+        margin-top: -100px;
+    }
+}
 
-    .footer__content {
+.films,
+.holidays {
+    margin-right: 10px;
+}
+
+.films img {
+    margin-left: 250px;
+}
+
+.holidays img {
+    margin-top: -200px;
+    margin-left: 170px;
+}
+
+.theater img {
+    margin-top: -140px;
+    margin-left: 40px;
+}
+
+/* Услуги */
+.offers {
+    margin-top: 150px;
+    h1 {
+        font-family: "Tilda Sans", sans-serif;
+        font-size: 50px;
+    }
+}
+
+.offers__block {
+    margin-top: 50px;
+    display: block;
+    background-color: rgba(41, 44, 43, .5);
+    backdrop-filter: blur(8px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    border: 3px solid #292C2B;
+    border-radius: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.offers__block__top,
+.offers__block__bottom {
+    display: flex;
+}
+
+.full__script {
+    border-right: 3px solid #292C2B;
+    border-bottom: 3px solid #292C2B;
+}
+
+.edit__script {
+    border-bottom: 3px solid #292C2B;
+}
+
+.analysis__script {
+    border-left: 3px solid #292C2B;
+    border-bottom: 3px solid #292C2B;
+}
+
+.contract__script {
+    border-right: 3px solid #292C2B;
+}
+
+.info__price__script {
+    font-family: "Tilda Sans", sans-serif;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 52px;
+}
+
+.full__script, .edit__script,
+.analysis__script, .contract__script {
+    font-family: "Tilda Sans", sans-serif;
+    padding: 52px;
+    h1 {
+        font-size: 40px;
+    }
+    p {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+}
+
+/* Прайс-лист */
+.price-list {
+    margin-top: 150px;
+    display: block;
+    font-family: "Tilda Sans", sans-serif;
+    font-size: 35px;
+    background: rgb(211, 130, 103);
+    background: linear-gradient(90deg, rgba(211, 130, 103, 0.35) 0%, rgba(255, 255, 255, 0.05) 100%);
+    padding: 31px 52px;
+    border-radius: 25px;
+    span {
+        font-family: "Idealist Sans", sans-serif;
+        font-weight: 100;
+    }
+    li {
+        margin-top: 20px;
+    }
+    li div {
         display: flex;
         justify-content: space-between;
-        margin: 0 auto;
-        max-width: 1840px;
     }
+}
 
-    .footer__navigation {
-        display: block;
-        justify-content: left;
-        li {
-            margin-bottom: 30px;
-        }
-        a {
-            font-size: 50px;
+/* Фидбек */
+.feedback {
+    margin-top: 150px;
+    background-color: rgba(41, 44, 43, .5);
+    backdrop-filter: blur(8px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 61px 52px;
+    font-family: "Tilda Sans", sans-serif;
+    border-radius: 25px;
+    height: max-content;
+    h1 {
+        font-size: 35px;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 18px;
+        color: #676767;
+    }
+}
+
+.feedback-form {
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    form {
+        font-size: 23px;
+        color: #292C2B;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.feedback-form__information {
+    display: grid;
+    width: 100%;
+    margin-right: 5px;
+    input {
+        margin-bottom: 5px;
+        height: 60px;
+        padding: 0 10px;
+    }
+    textarea {
+        margin-top: -98px;
+        resize: none;
+        outline: none;
+        padding: 15px 10px;
+    }
+    input, textarea {
+        background-color: #eee;
+        border-radius: 11px;
+    }
+}
+
+.feedback-form__feed {
+    display: grid;
+    width: 100%;
+    margin-left: 5px;
+    input:not(input[type="submit"]) {
+        color: #292C2B;
+        background-color: #eee;
+        margin-bottom: 10px;
+        height: 60px;
+        padding: 0 10px;
+    }
+    input[type="submit"] {
+        margin-top: 10px;
+        height: 60px;
+        color: #eee;
+        background-color: #D48166;
+    }
+    input[type="checkbox"] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        z-index: -999;
+        display: none;
+    }
+    input {
+        border-radius: 11px;
+    }
+}
+
+.feedback-form__feed__social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    label {
+        border-radius: 11px;
+        border: 3px solid #D48166;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        span {
             color: #eee;
         }
     }
-
-    .footer__contacts {
-        display: block;
-        ul {
-            margin-top: 30px;
-            display: flex;
-            justify-content: right;
-        }
-        ul li {
-            margin-left: 30px;
-        }
-        h1 {
-            font-size: 50px;
-        }
-    }
-
-    .footer__bottom {
-        display: flex;
-        margin: 80px auto;
-        justify-content: space-between;
-        max-width: 1840px;
-        h1 {
-            font-family: "Milksea Demo", sans-serif;
-            font-size: 40px;
-        }
-        h1:first-letter {
-            color: #D48166;
-        }
-        p {
-            font-family: "Idealist Sans", sans-serif;
-            font-size: 30px;
-            font-weight: 100;
-        }
-    }
-
-    /* Декор */
-    .blob-3, .blob-4,
-    .blob-5, .blob-6,
-    .blob-7 {
-        position: absolute;
-        z-index: -999;
-        filter: blur(70px);
-        user-select: none;
-        pointer-events: none;
-    }
-
-    .blob-3 {
-        margin-top: -140px;
-        left: 0;
-    }
-
-    .blob-4 {
-        right: 0;
-        margin-top: 150px;
-    }
-
-    .blob-5 {
-        left: 0;
-    }
-
-    .blob-6 {
-        right: 0;
-        margin-top: 180px;
-    }
-
-    .blob-7 {
-        left: 0;
-        margin-top: 100px;
-    }
-
 }
+
+.telegram {
+    margin-right: 5px;
+}
+
+.telegram:hover,
+.whatsapp:hover {
+    background-color: #D48166;
+}
+
+.whatsapp {
+    margin-left: 5px;
+}
+
+/* * * * * ПОДВАЛ * * * * */
+.footer {
+    margin-top: 150px;
+    position: absolute;
+    left: 0;
+    top: auto;
+    height: 540px;
+    width: 100%;
+    background-color: rgba(41, 44, 43, .5);
+    backdrop-filter: blur(8px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 52px 130px;
+    font-family: "Tilda Sans", sans-serif;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1840px;
+}
+
+.footer__navigation {
+    display: block;
+    justify-content: left;
+    li {
+        margin-bottom: 30px;
+    }
+    a {
+        font-size: 50px;
+        color: #eee;
+    }
+}
+
+.footer__contacts {
+    display: block;
+    ul {
+        margin-top: 30px;
+        display: flex;
+        justify-content: right;
+    }
+    ul li {
+        margin-left: 30px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+}
+
+.footer__bottom {
+    display: flex;
+    margin: 80px auto;
+    justify-content: space-between;
+    max-width: 1840px;
+    h1 {
+        font-family: "Milksea Demo", sans-serif;
+        font-size: 40px;
+    }
+    h1:first-letter {
+        color: #D48166;
+    }
+    p {
+        font-family: "Idealist Sans", sans-serif;
+        font-size: 30px;
+        font-weight: 100;
+    }
+}
+
+/* Декор */
+.blob-3, .blob-4,
+.blob-5, .blob-6,
+.blob-7 {
+    position: absolute;
+    z-index: -999;
+    filter: blur(70px);
+    user-select: none;
+    pointer-events: none;
+}
+
+.blob-3 {
+    margin-top: -140px;
+    left: 0;
+}
+
+.blob-4 {
+    right: 0;
+    margin-top: 150px;
+}
+
+.blob-5 {
+    left: 0;
+}
+
+.blob-6 {
+    right: 0;
+    margin-top: 180px;
+}
+
+.blob-7 {
+    left: 0;
+    margin-top: 100px;
+}
+
+

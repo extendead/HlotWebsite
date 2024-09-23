@@ -37,6 +37,19 @@ class Database:
         except Error as e:
             print(Back.RED + f"Ошибка добавления пользователя в базу! {e}")
 
+    def select_all_users(self):
+        """
+        :return: Все сообщения в базе
+        """
+        try:
+            self.cur.execute(""" SELECT * FROM users """)
+            res = self.cur.fetchall()
+            if not res:
+                print(Back.YELLOW + "Нет обращений!")
+            return res
+        except Error as e:
+            print(Back.RED + f"Ошибка при выводе обращений! {e}")
+
 #   #~#~#~# [ admin ] #~#~#~#
     def select_login_data(self, login: str) -> Any:
         """

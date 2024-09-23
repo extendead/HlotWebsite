@@ -1,0 +1,378 @@
+@import "main.css";
+
+/*
+
+ФИКС
+
+Лучше снизить порог для десктопа
+
+Вообще в планшетной версии справа хрень какая то
+
+-> Блок с информацией
+   1. Компухтерная версия - починить текст во втором блоке
+                            и заголовок в третьем
+   2. Планшетная версия - слишком сильно растягиваются, можно просто
+                          уменьшить
+
+-> Блок с картинками
+   1. Компудахтерная версия - чуть чуть корректнуть
+
+
+ */
+
+@media (min-width: 768px) and (max-width: 1279px) {
+
+    .header,
+    .body {
+        padding: 0 50px;
+    }
+
+    .logotype {
+        width: 100px;
+        height: 50px;
+        border-radius: 11px;
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .intro__photo {
+        margin-top: 20px;
+        
+        .intro__photo-2 {
+            margin-top: -140px;
+        }
+    }
+
+    .intro__text {
+        h1 {
+            font-size: 70px;
+        }
+        h4 {
+            font-size: 25px;
+        }
+    }
+
+    .information {
+        display: block;
+    }
+
+    .years,
+    .government {
+        margin-top: 15px;
+    }
+
+    .services__categories {
+        display: block;
+        ul {
+            width: 100%;
+        }
+        img {
+            z-index: 999;
+            margin-top: -300px;
+            right: 0;
+        }
+    }
+
+    .films,
+    .holidays,
+    .theater {
+        display: block;
+    }
+
+    .holidays {
+        img {
+            margin-top: -360px;
+            margin-right: -50px;
+        }
+    }
+
+    .theater {
+        img {
+            margin-top: -320px;
+            transform: rotate(-20deg);
+        }
+    }
+
+    .holidays,
+    .theater {
+        margin-top: 55px;
+    }
+
+    .offers__block__top {
+        display: block;
+    }
+
+    .full__script {
+        border-right: 0;
+    }
+
+    .analysis__script {
+        border-left: 0;
+    }
+
+    .price-list {
+        ul div {
+            display: block;
+            h4 {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .feedback {
+        padding: 40px 52px;
+    }
+
+    .feedback-form {
+        form {
+            display: block;
+            .feedback-form__information {
+                display: flex;
+                width: 100%;
+                input {
+                    width: 100%;
+                }
+                textarea {
+                    display: none;
+                }
+            }
+            .feedback-form__feed {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .footer {
+        padding: 40px 52px;
+        height: 420px;
+        h1 {
+            font-size: 45px;
+        }
+        ul li {
+            margin-bottom: 20px;
+            a {
+                font-size: 45px;
+            }
+        }
+
+    }
+
+    .footer__contacts {
+        ul {
+            margin-top: 20px;
+        }
+    }
+
+    .footer__bottom {
+        p {
+            margin-top: 5px;
+        }
+    }
+
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+    .header,
+    .body {
+        padding: 0 20px;
+    }
+
+    .logotype {
+        width: 80px;
+        height: 50px;
+        border-radius: 12px;
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .intro {
+        margin-top: 90px;
+        display: block;
+        .btn__intro__text {
+            border-radius: 12px;
+            height: 50px;
+            width: 120px;
+            font-size: 20px;
+        }
+    }
+
+    .intro__photo {
+        margin-top: 150px;
+        .intro__photo-2 {
+            margin-top: -120px;
+        }
+    }
+
+    .intro__text {
+        h1 {
+            font-size: 70px;
+            -webkit-text-stroke: unset;
+        }
+        h4 {
+            font-size: 15px;
+        }
+    }
+
+    .services__categories {
+        display: block;
+        .holidays,
+        .theater {
+            margin-top: 50px;
+        }
+    }
+
+    .information {
+        display: block;
+        .years,
+        .government {
+            margin-top: 20px;
+        }
+        .years {
+            p {
+                display: none;
+            }
+        }
+        .government {
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 40px;
+            }
+            p {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .films {
+        img {
+            margin-left: 50px;
+        }
+    }
+    .holidays {
+        img {
+            margin-top: -90px;
+            margin-left: 50px;
+        }
+    }
+
+    .theater {
+        img {
+            margin-left: 0;
+            margin-top: -80px;
+        }
+    }
+
+    .films ul,
+    .holidays ul,
+    .theater ul {
+        width: 327px;
+    }
+
+    .offers__block__top {
+        display: block;
+        div {
+            padding: 25px;
+        }
+    }
+    .full__script {
+        border-right: 0;
+    }
+    .analysis__script {
+        border-left: 0;
+    }
+
+    .offers__block__bottom {
+        display: block;
+        div {
+            padding: 25px;
+        }
+    }
+
+    .contract__script {
+        border-right: 0;
+        border-bottom: 3px solid #292C2B;
+    }
+
+    .price-list {
+        padding: 25px;
+        ul li {
+            div {
+                display: block;
+            }
+        }
+    }
+
+    .feedback {
+        padding: 25px;
+    }
+
+    .feedback-form {
+        form {
+            display: block;
+            .feedback-form__information {
+                display: flex;
+                width: 100%;
+                input {
+                    width: 100%;
+                }
+                textarea {
+                    display: none;
+                }
+            }
+            .feedback-form__feed {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .footer {
+        height: 400px;
+        padding: 25px;
+        .footer__navigation {
+            li {
+                margin-bottom: 8px;
+            }
+            a {
+                font-size: 35px;
+            }
+        }
+        .footer__contacts {
+            h1 {
+                font-size: 35px;
+            }
+            ul {
+                margin-top: 8px;
+                li {
+                    margin-left: 10px;
+                }
+            }
+        }
+        .footer__bottom {
+            margin-top: 170px;
+            h1 {
+                font-size: 25px;
+            }
+            p {
+                margin-top: -2px;
+                font-size: 20px;
+            }
+        }
+    }
+
+
+}

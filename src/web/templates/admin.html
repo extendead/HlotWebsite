@@ -2,6 +2,137 @@
 
 {% block title %}hlot - Админ панель{% endblock %}
 
+
+<!--
+        Пофиксить
+   1. Развертывание текста ❗
+
+
+-->
+
 {% block body %}
-test
+<div class="admin__panel">
+    <header class="admin__header">
+        <div class="admin__header__logo">
+            <h1><span>admin</span>panel</h1>
+        </div>
+        <div class="admin__header__exit">
+            <a href="">Выйти</a>
+        </div>
+    </header>
+    <div class="admin__table">
+        <table>
+            <tr>
+                <th class="table__head__id"><h1>ID</h1></th>
+                <th class="table__head__name"><h1>Имя</h1></th>
+                <th class="table__head__tel"><h1>Телефон</h1></th>
+                <th class="table__head__email"><h1>Email</h1></th>
+                <th class="table__head__sm"><h1>Соцсеть</h1></th>
+                <th class="table__head__txt"><h1>Текст</h1></th>
+                <th class="table__head__null"> </th>
+            </tr>
+            <!-- Цикл -->
+            {% for user in users %}
+            <tr>
+                <td class="user__feed__id">
+                    <a>{{ user[0] }}</a>
+                </td>
+                <td class="user__feed_name">
+                    <a>{{ user[1] }}</a>
+                </td>
+                <td class="user__feed__tel">
+                    <a>{{ user[2] }}</a>
+                </td>
+                <td class="user__feed__email">
+                    {% if user[3]|length > 0 %}
+                    <a>{{ user[3] }}</a>
+                    {% else %}
+                    <a>Нет почты</a>
+                    {% endif %}
+                </td>
+                <td class="user__feed__sm">
+                    {% if user[5]|length > 0 %}
+                    <a>{{ user[5] }}</a>
+                    {% else %}
+                    <a>Нет соцсети</a>
+                    {% endif %}
+                </td>
+                <td class="user__feed__txt">
+                    {% if user[4]|length > 50 %}
+                    <a class="long_text" onclick="systemScripts(this)">{{ user[4][:50] }}...</a>
+                    <a class="long_text__hide" onclick="systemScripts(this)">{{ user[4] }}...</a>
+                    {% elif user[4]|length == 0 %}
+                    <a>Нет текста</a>
+                    {% else %}
+                    <a>{{ user[4] }}</a>
+                    {% endif %}
+                </td>
+                <td class="user__feed__nav">
+                    <div class="user__feed__navigation" id="user__feed">
+
+                        <div class="message">
+                            {% if user[5] == "Telegram" %}
+                            <a href="https://t.me/{{user[2] }}">
+                                <img src="{{ url_for('static', filename='img/decoration/admin-decoration/table/Vector.png') }}" alt="">
+                            </a>
+                            {% else %}
+                            <a href="https://wa.me/{{user[2] }}">
+                                <img src="{{ url_for('static', filename='img/decoration/admin-decoration/table/Vector.png') }}" alt="">
+                            </a>
+                            {% endif %}
+                        </div>
+                        <div class="delete" onclick="deleteRow(this)"><img src="{{ url_for('static', filename='img/decoration/admin-decoration/table/мусорка.png') }}" alt=""></div>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+
+            <script>
+                function systemScripts(e) {
+                    const long_text = e;
+                    const hide_text = long_text.nextElementSibling;
+
+                    if (long_text.className === "long_text") {
+                        long_text.style.display = "none";
+                        long_text.style.fontSize = "0";
+
+                        hide_text.style.display = "flex";
+                        hide_text.style.fontSize = "20px";
+                    } else if (long_text.className === "long_text__hide") {
+                        long_text.style.display = "none";
+                        long_text.style.fontSize = "0";
+                    }
+                }
+
+
+                function deleteRow(e) {
+                    const row = e.closest('tr');
+                    if (row) {
+                        row.remove();
+                        console.log(e)
+                        /*
+                                const mysql = require('mysql');
+                                let con = mysql.createConnection({
+                                    host: ' database.host',
+                                    user: ' database.user',
+                                    password: ' database.password',
+                                    database: ' database.database'
+                                });
+
+                                con.connect((err) => {
+                                    if (err) {
+                                        console.log("Ошибка подключения.", err);
+                                        return;
+                                    }
+                                    con.query('DELETE FROM  database.database WHERE ${e}')
+                                })
+                        */
+                    }
+                }
+            </script>
+
+        </table>
+    </div>
+</div>
+
 {% endblock %}
